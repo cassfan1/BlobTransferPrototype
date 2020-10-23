@@ -20,9 +20,11 @@ namespace BlobTransferPrototype
           string name,
           ILogger log)
     {
-      await GetBlobAsync(name);
-
+      // move blobs
       await MoveBlobAsync(name);
+
+      // get blob metadata
+      //await GetBlobAsync(name);
     }
 
     private static async Task MoveBlobAsync(string blobName)
